@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小兔鲜官网，致力于打造全球最大的食品、生鲜电商购物平台">
+    <meta name="keywords" content="小兔鲜，食品，生鲜，服装，家电，电商，购物">
+    <title>小兔鲜-新鲜、惠民、快捷</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 按顺序引入，外联式样式表后写的生效 -->
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+    <!-- 快捷导航 -->
+    <div class="shortcut">
+        <div class="wrapper">
+            <ul>
+                <li><a href="#">请先登录</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">会员中心</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">在线客服</a></li>
+                <li><a href="#"><span></span>手机版</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <div class="header wrapper">
+        <!-- logo -->
+        <div class="logo">
+            <h1><a href="#">小兔鲜儿</a></h1>
+        </div>
+
+        <!-- 导航栏 -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">生鲜</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">餐厨</a></li>
+                <li><a href="#">电器</a></li>
+                <li><a href="#">居家</a></li>
+                <li><a href="#">洗护</a></li>
+                <li><a href="#">孕婴</a></li>
+                <li><a href="#">服装</a></li>
+            </ul>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="search">
+            <!-- input:输入框   placeholder：文本提示词 -->            
+            <input type="text" placeholder="搜一搜" >
+            <!-- 放大镜图标 -->
+            <span></span>
+        </div>
+
+        <!-- 购物车 -->
+        <div class="car">
+            <span>2</span>
+        </div>
+    </div>
+
+    <!-- 轮播图banner区域 -->
+    <div class="banner">
+        <!-- 只负责版心效果 -->
+        <div class="wrapper">
+            <!-- 轮播图，有多少个图，就有多少个li -->
+            <Ul>
+                <li><a href="#"><img src="./uploads/banner_1.png" alt=""></a></li>
+            </Ul> 
+
+            <!-- 侧边导航 -->
+            <div class="aside">
+                <ul>
+                    <li><a href="#">生鲜<span>水果 蔬菜</span></a></li>
+                    <li><a href="#">美食<span>面点 干果</span></a></li>
+                    <li><a href="#">餐厨<span>数码产品</span></a></li>
+                    <li><a href="#">电器<span>电器 床品 四件套 被枕</span></a></li>
+                    <li><a href="#">居家<span>居家 奶粉 玩具 辅食</span></a></li>
+                    <li><a href="#">洗护<span>洗护 洗发 洗护 美妆</span></a></li>
+                    <li><a href="#">孕婴<span>孕婴 奶粉 玩具</span></a></li>
+                    <li><a href="#">服饰<span>服饰 女装 男装</span></a></li>
+                    <li><a href="#">杂货<span>杂货 户外 图书</span></a></li>
+                    <li><a href="#">品牌<span>品牌 品牌制造</span></a></li>
+                </ul>
+            </div>
+
+            <!-- 箭头 -->
+            <!-- prev：上一个 -->
+            <a href="#" class="prev"></a>
+
+            <!-- next:下一个 -->
+            <a href="#" class="next"></a>
+
+            <!-- 底部圆点:当前状态——> current/active -->
+            <!-- JavaScript 找到用户点击的li  添加类名  li变成白色 -->
+            <ol>
+                <li></li>
+                <li></li>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div> 
+
+    <!-- 新鲜好物 -->
+    <div class="goods wrapper">
+        <!-- hd header 头部 -->
+        <div class="hd">
+            <h2>新鲜好物<span>新鲜出炉 品质靠谱</span></h2>
+            <a href="#">查看全部</a>
+        </div>
+        <!-- bd body 身体 -->
+        <!-- clearfix清除浮动，解决浮动元素引起的高度塌陷问题 -->
+        <div class="bd clearfix">
+            <ul>
+                <li >
+                    <a href="#">
+                        <img src="./uploads/new_goods_1.jpg" alt="">
+                        <p class="new">新 <br> 品</p>
+                        <h3>睿米无线吸尘器F8</h3>
+                        <div>¥<span>899</span></div>
+                    </a>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="./uploads/new_goods_2.jpg" alt="">
+                        <p class="new">新 <br> 品</p>
+                        <h3>智能环绕3D空调</h3>
+                        <div>¥<span>1299</span></div>
+                    </a>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="./uploads/new_goods_3.jpg" alt="">
+                        <p class="new">新 <br> 品</p>
+                        <h3>广东软软糯米煲仔饭</h3>
+                        <div>¥<span>129</span></div>
+                    </a>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="./uploads/new_goods_4.jpg" alt="">
+                        <p class="new">新 <br> 品</p>
+                        <h3>罗西机械智能手表</h3>
+                        <div>¥<span>3399</span></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 人气推荐 -->
+    <div class="popular wrapper">
+        <!-- hd header 头部 -->
+        <div class="hd">
+            <h2>人气推荐<span>人气爆款 不容错过</span></h2>
+        </div>
+        <!-- bd body 身体 -->
+        <!-- clearfix清除浮动，解决浮动元素引起的高度塌陷问题 -->
+        <div class="bd clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/popular_1.jpg" alt="">
+                        <h3>特惠推荐</h3>
+                        <div>我猜得到 你的需要</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/popular_2.jpg" alt="">
+                        <h3>爆款推荐</h3>
+                        <div>人气好物推荐</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/popular_3.jpg" alt="">
+                        <h3>场景使用一站买全</h3>
+                        <div>编辑精心整理推荐</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/popular_4.jpg" alt="">
+                        <h3>领卷中心</h3>
+                        <div>发现更多超值优惠</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+    </div>  
+
+    <!-- 热门品牌 -->
+    <div class="hot">
+        <!-- hd header 头部 -->
+        <div class="wrapper">
+        <div class="hd">
+            <h2>热门品牌<span>国际经典 品质保障</span></h2>
+            <div class="left"><span></span></div>
+            <div class="right"><span></span></div>
+        </div>
+        <!-- bd body 身体 -->
+        <!-- clearfix清除浮动，解决浮动元素引起的高度塌陷问题 -->
+        <div class="bd clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/brand_goods_1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/brand_goods_2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/brand_goods_3.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/brand_goods_4.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./uploads/brand_goods_5.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 生鲜 -->
+    <div class="shengxian wrapper">
+        <!-- hd:head   头部 -->
+        <div class="hd">
+            <h2>生鲜</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">蔬菜</a></li>
+                <li><a href="#">肉禽蛋</a></li>
+                <li><a href="#">裤装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">内衣</a></li>
+            </ul>
+        </div>
+
+        <!-- bd:body   身体 -->
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#"><img src="./uploads/fresh_goods_cover.png" alt=""></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_1.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>美威 智利原味三文鱼排 240g/袋 4片装 <br>
+                            海鲜年货</p>
+                        <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_2.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>红功夫 麻辣小龙虾1.5kg 4-6钱/25-32只 <br>
+                        火锅食材</p>
+                        <div class="money">¥<span>79</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_3.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>三都港 冷冻无公害黄花鱼 700g 2条 袋装 <br>
+                        海鲜水产</p>
+                        <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_4.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>渔公码头 大连鲜食入味 即食海参 辽参刺参 <br>调味海</p>
+                        <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_5.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>越南白心火龙果4个装 标准果400-550g 
+                        </p>
+                        <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_6.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>广西沃柑 柑橘1.5kg</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_7.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>进口 牛油果 6个装 单果重约130-180g 
+                        </p>
+                        <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/fresh_goods_8.jpg" alt=""></a>
+                        <div class="bottom">
+                        <p>泰国进口山竹5A级 <br>500g</p>
+                        <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 服饰 -->
+    <div class="shengxian wrapper">
+        <!-- hd:head   头部 -->
+        <div class="hd">
+            <h2>服饰</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">蔬菜</a></li>
+                <li><a href="#">肉禽蛋</a></li>
+                <li><a href="#">裤装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">内衣</a></li>
+            </ul>
+        </div>
+    
+        <!-- bd:body   身体 -->
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#"><img src="./uploads/clothes_goods_cover.jpg" alt=""></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_1.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>美威 智利原味三文鱼排 240g/袋 4片装 <br>
+                                海鲜年货</p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_2.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>红功夫 麻辣小龙虾1.5kg 4-6钱/25-32只 <br>
+                                火锅食材</p>
+                            <div class="money">¥<span>79</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_3.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>三都港 冷冻无公害黄花鱼 700g 2条 袋装 <br>
+                                海鲜水产</p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_4.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>渔公码头 大连鲜食入味 即食海参 辽参刺参 <br>调味海</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_5.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>越南白心火龙果4个装 标准果400-550g
+                            </p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_6.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>广西沃柑 柑橘1.5kg</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_7.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>进口 牛油果 6个装 单果重约130-180g
+                            </p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/clothes_goods_8.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>泰国进口山竹5A级 <br>500g</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 餐厨 -->
+    <div class="shengxian wrapper">
+        <!-- hd:head   头部 -->
+        <div class="hd">
+            <h2>餐厨</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">蔬菜</a></li>
+                <li><a href="#">肉禽蛋</a></li>
+                <li><a href="#">裤装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">内衣</a></li>
+            </ul>
+        </div>
+    
+        <!-- bd:body   身体 -->
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#"><img src="./uploads/kitchen_goods_cover.jpg" alt=""></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_1.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>美威 智利原味三文鱼排 240g/袋 4片装 <br>
+                                海鲜年货</p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_2.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>红功夫 麻辣小龙虾1.5kg 4-6钱/25-32只 <br>
+                                火锅食材</p>
+                            <div class="money">¥<span>79</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_3.jpg " alt=""></a>
+                        <div class="bottom">
+                            <p>三都港 冷冻无公害黄花鱼 700g 2条 袋装 <br>
+                                海鲜水产</p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_4.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>渔公码头 大连鲜食入味 即食海参 辽参刺参 <br>调味海</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_5.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>越南白心火龙果4个装 标准果400-550g
+                            </p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_6.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>广西沃柑 柑橘1.5kg</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_7.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>进口 牛油果 6个装 单果重约130-180g
+                            </p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/kitchen_goods_8.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>泰国进口山竹5A级 <br>500g</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 居家 -->
+    <div class="shengxian wrapper">
+        <!-- hd:head   头部 -->
+        <div class="hd">
+            <h2>居家</h2>
+            <a href="#" class="more">查看全部</a>
+            <ul>
+                <li><a href="#">水果</a></li>
+                <li><a href="#">蔬菜</a></li>
+                <li><a href="#">肉禽蛋</a></li>
+                <li><a href="#">裤装</a></li>
+                <li><a href="#">衬衫</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">内衣</a></li>
+            </ul>
+        </div>
+    
+        <!-- bd:body   身体 -->
+        <div class="bd clearfix">
+            <div class="left">
+                <a href="#"><img src="./uploads/home_goods_cover.jpg" alt=""></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_1.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>美威 智利原味三文鱼排 240g/袋 4片装 <br>
+                                海鲜年货</p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_2.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>红功夫 麻辣小龙虾1.5kg 4-6钱/25-32只 <br>
+                                火锅食材</p>
+                            <div class="money">¥<span>79</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_3.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>三都港 冷冻无公害黄花鱼 700g 2条 袋装 <br>
+                                海鲜水产</p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_4.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>渔公码头 大连鲜食入味 即食海参 辽参刺参 <br>调味海</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_5.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>越南白心火龙果4个装 标准果400-550g
+                            </p>
+                            <div class="money">¥<span>59</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_6.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>广西沃柑 柑橘1.5kg</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_7.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>进口 牛油果 6个装 单果重约130-180g
+                            </p>
+                            <div class="money">¥<span>49</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./uploads/home_goods_8.jpg" alt=""></a>
+                        <div class="bottom">
+                            <p>泰国进口山竹5A级 <br>500g</p>
+                            <div class="money">¥<span>899</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <!-- 最新专题 -->
+    <div class="news">
+        <!-- hd header 头部 -->
+        <div class="wrapper">
+            <div class="hd"> 
+                <h2>最新专题</h2>
+                <a href="#">查看全部</a>
+            </div>
+            <!-- bd body 身体 -->
+            <!-- clearfix清除浮动，解决浮动元素引起的高度塌陷问题 -->
+            <div class="bd clearfix">
+                <div class="left">
+                    <a href="#">
+                        <img src="./uploads/topic_goods_1.jpg" alt="">
+                    </a>
+                    <h3>吃这些美食才不算辜负自己</h3>
+                    <p>餐厨起居洗护好物</p>
+                    <div class="money">￥<span>29.9起</span></div>
+                    <div class="heart"> <span>1220</span></div>
+                    <div class="eye"><span>1880</span></div>
+                    <div class="comment"><span>248</span></div>
+                </div>
+                <div class="center">
+                    <a href="#">
+                        <img src="./uploads/topic_goods_2.jpg" alt="">
+                    </a>
+                    <h3>吃这些美食才不算辜负自己</h3>
+                    <p>餐厨起居洗护好物</p>
+                    <div class="money">￥<span>29.9起</span></div>
+                    <div class="heart"> <span>1220</span></div>
+                    <div class="eye"><span>1880</span></div>
+                    <div class="comment"><span>248</span></div>
+                </div>
+                <div class="right">
+                    <a href="#">
+                        <img src="./uploads/topic_goods_3.jpg" alt="">
+                    </a>
+                    <h3>吃这些美食才不算辜负自己</h3>
+                    <p>餐厨起居洗护好物</p>
+                    <div class="money">￥<span>29.9起</span></div>
+                    <div class="heart"> <span>1220</span></div>
+                    <div class="eye"><span>1880</span></div>
+                    <div class="comment"><span>248</span></div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 售后服务 -->
+    <div class="contact">
+        <div class="service">
+            <div class="top">客户服务</div>
+            <div class="left">
+                <span class="icon"></span>
+                <span>在线客服</span>
+            </div>
+            <div class="right">
+                <span class="icon"></span>
+                <span>问题反馈</span>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="top">关注我们</div>
+            <div class="left">
+                <span class="icon"></span>
+                <span>公众号</span>
+            </div>
+            <div class="right">
+                <span class="icon"></span>
+                <span>微博</span>
+            </div>
+        </div>
+        <div class="app">
+            <div class="download">下载APP</div>
+            <img src="./uploads/qrcode.png" alt="" class="left">
+            <div class="right">
+                <div class="top">
+                    扫描二维码
+                    <br>
+                    立刻下载APP
+                </div>
+                <div class="bottom"><a href="#">下载页面</a></div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="phone">
+            <div class="top">服务热线</div>
+            <div class="bottom">
+                <p>
+                    400-0000-000
+                    <br>
+                    <span>周一至周日 8:00-18:00</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 版权区域 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="top">
+                <ul>
+                    <li> <span>价格亲民</span></li>
+                    <li> <span>物流快捷</span> </li>
+                    <li> <span>品质新鲜</span></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="#">关于我们</a> |
+                    <a href="#">帮助中心</a> |
+                    <a href="#">售后服务</a> |
+                    <a href="#">配送与验收</a> |
+                    <a href="#">商务合作</a> |
+                    <a href="#">搜索推荐</a> |
+                    <a href="#">友情链接</a>
+                </p>
+                <p>CopyRight @ 小兔鲜儿</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

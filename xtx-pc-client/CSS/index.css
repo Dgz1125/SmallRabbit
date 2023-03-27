@@ -1,0 +1,1001 @@
+/* 放index页面的样式表（首页的CSS文件）*/
+
+/* 轮播图 */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+}
+
+.banner  .aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0,.8);
+}
+
+.banner .aside li{
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside  a{
+    position: relative;
+    padding-left: 36px;
+    padding-right: 19px;
+    /* 宽度和父级一样 */
+    display: block;
+    height: 50px;
+    color: #fff;
+}
+
+.banner .aside a span{
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover{
+    background-color: #27ba9b;
+}
+
+/* after的父级就是a */
+.banner .aside a::after{
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-image: url(../images/sprites.png);
+    background-position: -79px -109px;
+}
+
+/* 并集：有共同点 */
+.banner  .prev,.next{
+    position:absolute ;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .2);
+    background-image: url(../images/sprites.png);
+    border-radius: 50%;
+}
+
+
+/* 背景图位置负责两件事：
+                        1、改变箭头在盒子里面的位置；
+                        2、改变精灵图的位置； 
+*/
+/* 导致在精灵图中测量尺寸不准确 */
+/*
+    解决方案有2种：
+                1、书写背景图位置属性，借助谷歌的调试工具调试具体的位置数值（最快、最佳方法）
+                2、书写标签的时候，a负责盒子，里面再添加一个span负责箭头
+                    （盒子与箭头分开进行调试）
+ */
+.banner  .prev{
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.banner  .next {
+    right: 10px;
+    background-position: -23px -60px;
+}
+
+
+/* 圆点 */
+.banner ol{
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    /* width: 200px; */
+    height: 10px;
+}
+
+.banner ol li{
+    float: left;
+    margin-right:15px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,.4);
+    border-radius: 50%;
+    /* 鼠标：手型 */
+    cursor: pointer;
+}
+
+.banner ol .current{
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+.goods .hd{
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.goods .hd h2{
+    float: left;
+    font-size: 29px;
+    font-weight: normal;
+    height: 114px;
+}
+
+.goods .hd span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+    /* font-weight: normal; */
+}
+
+.goods .hd a,
+.shengxian .hd .more,
+.news .hd a{
+    float: right;
+    color: #999;    
+}
+
+.goods .hd a::after,
+.shengxian .hd .more::after,
+.news .hd a::after
+{
+    content: '';
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    /* 使文本和图片对齐 */
+    vertical-align: middle;
+}
+
+.goods .bd li{
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:last-child{
+    margin-right: 0;
+}
+
+.goods .bd li img{
+    width: 304px;
+    /* height: 305px; */
+}
+.goods .bd li .new{
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    width: 28px;
+    height: 51px;
+    border: 2px solid #27ba9b;;
+    font-size: 18px;
+    color: #27ba9b;
+    text-align: center;
+    line-height: 23px;
+}
+
+.goods .bd li h3{
+    margin-top:20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+}
+
+.goods .bd li div{
+    /* margin-bottom: 21px; */
+    font-size: 17px;
+    /* font-weight: normal; */
+    color: #9a2e1f;
+}
+
+.goods .bd li span{
+    font-size: 23px;
+}
+
+
+/* 人气推荐 */
+.popular .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.popular .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: normal;
+    height: 114px;
+}
+
+.popular .hd span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+    font-weight: normal;
+}
+
+.popular .bd li {
+    float: left;
+    /* display: block; */
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.popular .bd li:last-child {
+    margin-right: 0;
+}
+
+.popular .bd li img {
+    width: 304px;
+    height: 305px;
+}
+
+.popular .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+}
+
+.popular .bd li div {
+    margin-bottom: 21px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #999;
+}
+
+
+/* 热门品牌 */
+.hot{
+    position: relative;
+    height: 466px;
+    background-color: #f5f5f5;
+}
+
+/* .hot .wrapper{
+    height: 466px;
+} */
+.hot .hd {
+    height: 111px;
+    /* background-color: pink; */
+    line-height: 111px;
+}
+
+.hot .hd h2 {
+    float: left;
+    font-size: 28px;
+    font-weight: normal;
+    height: 111px;
+}
+
+.hot .hd span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+    font-weight: normal;
+}   
+
+.hot .hd .left{
+    float: right;
+    margin-top: 79px;
+    margin-right: 31px;
+    width: 20px;
+    height: 20px;
+    background-color: #e2e2e2;
+}
+
+.hot .hd .left span{
+    position:absolute;
+    top: 78px;
+    right: 177px;
+    width: 7px;
+    height: 22px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 -71px;
+}
+
+.hot .hd .right {
+    float: right;
+    margin-top: 79px;
+    margin-right: -51px;
+    width: 20px;
+    height: 20px;
+    background-color:#27ba9b;
+}
+
+.hot .hd .right span {
+    position: absolute;
+    top: 82px;
+    right: 131px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprites.png);
+    background-position: -40px -110px;
+}
+
+.hot .bd li {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 45px;
+    width: 244px;
+    height: 306px;
+}
+
+.hot .bd li:last-child {
+    margin-right: 0;
+}
+
+.hot .bd li img {
+    width: 244px;
+    height: 306px;
+}
+
+
+/* 生鲜 */
+.shengxian .hd{
+    height: 96px;
+    line-height: 96px;
+}
+
+.shengxian .hd h2{
+    float: left;
+    height: 28px;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shengxian .hd .more {
+    float: right;
+}
+.shengxian .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.shengxian .hd ul li {
+    float: left;
+}
+
+.shengxian .hd li a {
+    padding: 2px 7px;
+    /* 13px-7px */
+    margin-right: 6px;
+}
+
+.shengxian .hd li a:hover{
+    background-color:#27ba9b;
+    color: #fff;
+}
+
+.shengxian .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    /* background-color: blue; */
+}
+
+.shengxian .bd .right{
+    float: right;
+    width: 1000px;
+    height: 610px;
+    /* background-color: green; */
+}
+
+.shengxian .bd .right li{
+    float: left;
+    margin: 3px 4px;
+    width: 242px;
+    height: 304px;
+    /* text-align: center; */
+    /* background-color: green; */
+}
+.shengxian .bd .right li img{
+    width: 184px;
+    height: 184px;
+}
+
+.shengxian .bd .right li:nth-child(4n){
+    margin-right: 0;
+}
+
+.shengxian .bd .right li:nth-child(1),
+.shengxian .bd .right li:nth-child(2),
+.shengxian .bd .right li:nth-child(3),
+.shengxian .bd .right li:nth-child(4){
+    margin-top: 0;
+}
+
+.shengxian .bd .right li:nth-child(5),
+.shengxian .bd .right li:nth-child(6),
+.shengxian .bd .right li:nth-child(7),
+.shengxian .bd .right li:nth-child(8){
+    margin-bottom: 0;
+}
+.shengxian .bd .right li .bottom{
+    margin: 10px 47px 13px 29px;
+    width: 182px;
+    height: 87px;
+}
+
+.shengxian .bd .right li .bottom h3{
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.shengxian .bd .right li .money{
+    margin-top: 5px;
+    width: 28px;
+    height: 18px;
+    font-size: 17px;
+    color: #9a2e1f;
+    font-weight: normal;
+}
+
+.shengxian .bd .right li .money span {
+    font-size: 22px;
+    color: #9a2e1f;
+    font-weight: normal;
+}
+
+
+/* 最新专题 */
+.news {
+    height: 512px;
+    background-color: #f5f5f5;
+}
+
+
+.news .hd {
+    height: 111px;
+    line-height: 111px;
+}
+
+.news .hd h2 {
+    float: left;
+    font-size: 28px;
+    font-weight: normal;
+    height: 111px;
+}
+
+.news .bd{
+    height: 357px;
+    /* background-color: pink; */
+    margin-bottom: 40px;
+}
+
+.news .bd .left{
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    width: 406px;
+    height: 357px;
+    background-color: #fff;
+}
+
+.news .bd .left h3{
+    position: absolute;
+    top: 222px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: PingFangSC-Regular;
+    color: #fff;
+}
+
+.news .bd .left p{
+    position: absolute;
+    top: 255px;
+    left: 14px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    color: #999;
+}
+
+.news .bd .left .money{
+    position: absolute;
+    top: 233px;
+    right: 15px;
+    width: 81px;
+    height: 27px;
+    background-color: #fff;
+    font-size: 14px;
+    color:#9a2e1f;
+    line-height: 27px;
+    text-align: center;
+}
+
+.news .bd .left .money span{
+    font-size: 17px;
+}
+
+.news .bd .left .heart{
+    position: absolute;
+    top: 315px;
+    left: 17px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -110px -108px;
+}
+.news .bd .left .heart span{
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .left .eye {
+    position: absolute;
+    top: 315px;
+    left: 89px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -150px -108px;
+}
+
+.news .bd .left .eye span {
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .left .comment {
+    position: absolute;
+    top: 315px;
+    left: 341px;
+    width: 50px;
+    height: 18px;
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -190px -108px;
+}
+
+.news .bd .left .comment span {
+    padding-left: 28px;
+    padding-top: 14px;
+}
+
+.news .bd .center {
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    width: 406px;
+    height: 357px;
+    background-color: #fff;
+}
+
+.news .bd .center h3 {
+    position: absolute;
+    top: 222px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: PingFangSC-Regular;
+    color: #fff;
+}
+
+.news .bd .center p {
+    position: absolute;
+    top: 255px;
+    left: 14px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    color: #999;
+}
+
+.news .bd .center .money {
+    position: absolute;
+    top: 233px;
+    right: 15px;
+    width: 81px;
+    height: 27px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #9a2e1f;
+    line-height: 27px;
+    text-align: center;
+}
+
+.news .bd .center .money span {
+    font-size: 17px;
+}
+
+.news .bd .center .heart {
+    position: absolute;
+    top: 315px;
+    left: 17px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -240px -108px;
+}
+
+.news .bd .center .heart span {
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .center .eye {
+    position: absolute;
+    top: 315px;
+    left: 89px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -150px -108px;
+}
+
+.news .bd .center .eye span {
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .center .comment {
+    position: absolute;
+    top: 315px;
+    left: 341px;
+    width: 50px;
+    height: 18px;
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -190px -108px;
+}
+
+.news .bd .center .comment span {
+    padding-left: 28px;
+    padding-top: 14px;
+}
+
+.news .bd .right {
+    position: relative;
+    float: left;
+    margin-right: 9px;
+    width: 406px;
+    height: 357px;
+    background-color: #fff;
+}
+
+.news .bd .right h3 {
+    position: absolute;
+    top: 222px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: PingFangSC-Regular;
+    color: #fff;
+}
+
+.news .bd .right p {
+    position: absolute;
+    top: 255px;
+    left: 14px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    color: #999;
+}
+
+.news .bd .right .money {
+    position: absolute;
+    top: 233px;
+    right: 15px;
+    width: 81px;
+    height: 27px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #9a2e1f;
+    line-height: 27px;
+    text-align: center;
+}
+
+.news .bd .right .money span {
+    font-size: 17px;
+}
+
+.news .bd .right .heart {
+    position: absolute;
+    top: 315px;
+    left: 17px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -110px -108px;
+}
+
+.news .bd .right .heart span {
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .right .eye {
+    position: absolute;
+    top: 315px;
+    left: 89px;
+    width: 50px;
+    height: 18px;
+    /* background-color: pink; */
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -150px -108px;
+}
+
+.news .bd .right .eye span {
+    padding-left: 24px;
+    padding-top: 13px;
+}
+
+.news .bd .right .comment {
+    position: absolute;
+    top: 315px;
+    left: 341px;
+    width: 50px;
+    height: 18px;
+    font-size: 10px;
+    background-image: url(../images/sprites.png);
+    background-position: -190px -108px;
+}
+
+.news .bd .right .comment span {
+    padding-left: 28px;
+    padding-top: 14px;
+}
+
+
+/* 售后服务 */
+.contact{
+    height: 300px;
+}
+
+/* service */
+.contact .service{
+    float: left;
+    margin-left: 385px;
+    margin-top: 79px;
+    width: 192px;
+    height: 143px;
+    /* border: 1px solid #000; */
+}
+
+.contact .service .top{
+    padding-left: 65px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #999;
+}
+
+.contact .service .left{
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    width: 93px;
+    height: 92px;
+    border: 1px solid #eee;
+}
+.contact .service .left .icon{
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    background-image: url(../images/sprites.png);
+    background-position: -250px -70px;
+
+    width: 29px;
+    height: 27px;
+}
+
+.contact .service .left span{
+    position: absolute;
+    top: 59px;
+    left: 18px;
+    font-size: 14px;
+    color: #999;
+}
+
+.contact .service .right {
+    position: relative;
+    float: right;
+    margin-top: 25px;
+    margin-right: 0;
+    width: 93px;
+    height: 92px;
+    border: 1px solid #eee;
+}
+
+.contact .service .right .icon {
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    background-image: url(../images/sprites.png);
+    background-position: -350px -70px;
+
+    width: 29px;
+    height: 27px;
+}
+
+.contact .service .right span {
+    position: absolute;
+    top: 59px;
+    left: 18px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* chat */
+.contact .chat {
+    float: left;
+    margin-left: 118px;
+    margin-top: 79px;
+    width: 192px;
+    height: 143px;
+    /* border: 1px solid #000; */
+}
+
+.contact .chat .top {
+    padding-left: 65px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #999;
+}
+
+.contact .chat .left {
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    width: 93px;
+    height: 92px;
+    border: 1px solid #eee;
+}
+
+.contact .chat .left .icon {
+    position: absolute;
+    top: 19px;
+    left: 29px;
+    background-image: url(../images/sprites.png);
+    background-position: -204px -14px;
+
+    width: 36px;
+    height: 29px;
+}
+
+.contact .chat .left span {
+    position: absolute;
+    top: 59px;
+    left: 27px;
+    font-size: 14px;
+    color: #999;
+}
+
+.contact .chat .right {
+    position: relative;
+    float: right;
+    margin-top: 25px;
+    margin-right: 0;
+    width: 93px;
+    height: 92px;
+    border: 1px solid #eee;
+}
+
+.contact .chat .right .icon {
+    position: absolute;
+    top: 19px;
+    left: 29px;
+    background-image: url(../images/sprites.png);
+    background-position: -350px -14px;
+    width: 36px;
+    height: 29px;
+}
+
+.contact .chat .right span {
+    position: absolute;
+    top: 59px;
+    left: 33px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* APP */
+.contact .app{
+    position: relative;
+    margin-top: 79px;
+    margin-left: 93px;
+    float: left;
+    width: 241px;
+    height: 156px;
+}
+
+.contact .app .download{
+    color: #999;
+    padding-left: 95px;
+}
+
+.contact .app .left{
+    position: absolute;
+    top: 47px;
+    left: 7px;
+}
+
+.contact .app .right{
+    margin-top: 23px;
+    margin-left: 123px;
+    width: 105px;
+    height: 103px;
+    text-align: left;
+}
+
+.contact .app .right .top{
+    color: #999;
+}
+
+.contact .app .right .bottom{
+    margin-top: 8px;
+    width: 103px;
+    height: 32px;
+    background-color: #27ba9b;
+    line-height: 32px;
+    text-align: center;
+}
+
+.contact .line{
+    float: left;
+    margin-top: 70px;
+    margin-left: 33px;
+    width: 2px;
+    height: 189px;
+    background-color: #f2f2f2;
+}
+
+.contact .phone{
+    float: left;
+    margin-top: 78px;
+    margin-left: 74px;
+    width: 160px;
+    height: 122px;
+}
+
+.contact .phone .top{
+    padding-left: 46px;
+    color:#999;
+}
+
+.contact .phone .bottom{
+    margin-top: 38px;
+    width: 160px;
+    height:50px ;
+    text-align: center;
+}
+
+.contact .phone .bottom p{
+    font-size: 22px;
+    color: #666;
+}
+
+.contact .phone .bottom  span{
+    font-size: 15px;
+    color: #999;
+}
